@@ -1,0 +1,5 @@
+streamlit
+matplotlib
+spacy
+textblob
+vaderSentiment
