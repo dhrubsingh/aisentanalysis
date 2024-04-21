@@ -1,6 +1,6 @@
 streamlit
 matplotlib
-spacy==3.4.0  # Specify the spaCy version if needed
+spacy
 textblob
 vaderSentiment
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz
