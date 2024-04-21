@@ -15,7 +15,7 @@ def load_spacy_model(model_name="en_core_web_sm"):
 
 def perform_sent_analysis(text):
     # Load spaCy model for NLP tasks
-    nlp = load_spacy_model()
+    nlp = load_spacy_model('en_core_web_sm-3.5.0')
 
     # Basic Sentiment Analysis with TextBlob
     blob = TextBlob(text)
