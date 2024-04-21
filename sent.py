@@ -2,10 +2,20 @@ import spacy
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+import os
+
+def load_spacy_model(model_name="en_core_web_sm"):
+    try:
+        return spacy.load(model_name)
+    except OSError:
+        print(f"Downloading the spaCy model {model_name}...")
+        os.system(f"python -m spacy download {model_name}")
+        return spacy.load(model_name)
+
 
 def perform_sent_analysis(text):
     # Load spaCy model for NLP tasks
-    nlp = spacy.load("en_core_web_sm")
+    nlp = load_spacy_model()
 
     # Basic Sentiment Analysis with TextBlob
     blob = TextBlob(text)
