@@ -183,6 +183,9 @@ def main():
         - **Temporal Sentiment**: Similar to aspect-based analysis but instead of seeing sentiment changes over a topic, you look at the sentiment changes over 
         each sentence within a paragraph. This is more useful for shorter pieces of writing to more immediately see the changes in sentiment.
 
+
+        For more information on the code and techincal framework selection, please feel free to visit [this](https://github.com/dhrubsingh/aisentanalysis)
+        GitHub repository. 
         
         """
     )
