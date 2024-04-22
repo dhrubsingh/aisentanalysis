@@ -105,7 +105,6 @@ def plot_aspect_based_comparison(sent_results):
 
 
 
-
 # Function to plot Temporal Sentiment Analysis comparison for 4 texts
 def plot_temporal_sentiments(sent_results):
     num_texts = len(sent_results)
@@ -164,7 +163,29 @@ def main():
     st.set_page_config(page_title="Text Sentiment Comparison", layout="wide")
 
     # Title for your app
-    st.title("Text Sentiment Comparison")
+    st.title("AI Generated Text Sentiment Analysis Comparison")
+
+    # About section
+    st.sidebar.title("About")
+    st.sidebar.info(
+        """
+        This web application performs several key aspects of sentiment analysis on AI-generated text. The goal is to unravel the differences between 
+        the different AI tools with respect to how they generate content. Here are the different sentiment aspects that I capture in this project:
+
+        - **Polarity Score**: This is a score in the range (-1, 1), that captures the overall sentiment of the text, where -1 is most negative
+        and 1 is most positive. Polarity is a useful metric to immedeaitely assess overall emotion behind text.
+        - **Subjectivity Score**: This is another score in the range (0, 1) that measures the subjectivity of the text, namely how much of it is actually
+        based on personal opinion rather than objective information. 
+        - **Valence Aware Dictionary and sEntiment Reasoner (VADER) Score**: similar to polarity score, but is a lexicon and rule-based sentiment analysis tool that
+           is better at understanding internet slang, emoticons, and other abbreviations. Also in the range (-1, 1) with -1 being the most negative sentiment and 1 being the most positive sentiment.
+        - **Aspect-Based Sentiment**: Analyzes specific overarching topics within a text and measures senitment with respect to that topic. Useful for longer pieces of text and
+        places where there is some progression within a story.
+        - **Temporal Sentiment**: Similar to aspect-based analysis but instead of seeing sentiment changes over a topic, you look at the sentiment changes over 
+        each sentence within a paragraph. This is more useful for shorter pieces of writing to more immediately see the changes in sentiment.
+
+        
+        """
+    )
 
     # Text input
     st.header("Input texts for sentiment analysis:")
